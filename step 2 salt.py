@@ -7,7 +7,7 @@ salt = 563
 # salt -1 = 250
 with open('p', 'r') as f:
     p = int(f.readline())
-m = (m*salt) % p
+m = (m*salt) % (p-1)
 f = random.randint(2, p-2)
 while math.gcd(f, p-1) != 1:
     f = random.randint(2, p-2)

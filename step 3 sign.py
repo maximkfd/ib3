@@ -1,6 +1,6 @@
 # m = f * l + c*r mod p-1
 with open('m_salt', 'r') as t:
-    m = int(t.readline())
+    m_salt = int(t.readline())
     f = int(t.readline())
 with open('sk', 'r') as t:
     c = int(t.readline())
@@ -10,7 +10,7 @@ with open('sk', 'r') as t:
     b = int(words[2])
 r = pow(q, f, p)
 for i in range(0, p):
-    if m == (f * i + c * r*666) % (p-1):
+    if m_salt == (f * i + c * r*563) % (p-1):
         l = i
         break
 print("lambda is " + str(l))
